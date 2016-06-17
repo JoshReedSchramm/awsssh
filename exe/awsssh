@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require 'commander/import'
+require_relative '../lib/awsssh'
+
+program :name, "awsssh"
+program :version, Awsssh::VERSION
+program :description, %q{Easy access to all of your AWS instances}
+program :help, 'Author', 'Stephen Mariano Cabrera <smcabrera.github.io> and Josh Schramm'
+program :help, 'Version', "#{Awsssh::VERSION}"
+
+command :ls do |c|
+  c.syntax = 'awsssh ls'
+  c.summary = 'Lists all servers'
+  c.description = c.summary # Because we're lazy
+  c.action do |args, options|
+    puts "I'm alive!!!!"
+  end
+end
+
