@@ -6,6 +6,7 @@ module Awsssh
       end
 
       def execute
+        Awsssh::Credentials.set_configuration
         client.describe_instances
       end
 
